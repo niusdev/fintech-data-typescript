@@ -1,5 +1,4 @@
-
-export async function fecthTransacoes(url: string) {
+export default async function fetchData<T>(url: string): Promise<T | null> {
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -8,6 +7,6 @@ export async function fecthTransacoes(url: string) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Erro na requisição!", error);
+    return null;
   }
 }
