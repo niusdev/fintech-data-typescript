@@ -5,8 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fintech-data-typescript</title>
+    <style>
+      body {
+        font-family: sans-serif;
+
+        padding: 1rem;
+      }
+
+      h2,
+      p {
+        margin-left: 1rem;
+      }
+
+      h2 {
+        border-top: 6px solid #eeeefa;
+        padding-top: 1rem;
+      }
+      table {
+        border-spacing: 0;
+        text-align: left;
+      }
+
+      table td,
+      table th {
+        padding: 0.5rem 1rem;
+      }
+
+      table tr:nth-child(even) {
+        background-color: #eeeefa;
+      }
+      div {
+        border-top: 3px solid #eeeefa;
+      }
+    </style>
   </head>
   <body>
+    <h2>Dados</h2>
+
+    <table id="transacoes">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Compra</th>
+          <th>Pagamento</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <script type="module" src="/dist/script.js"></script>
   </body>
 </html>

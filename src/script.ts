@@ -10,7 +10,23 @@ async function handleData() {
   if (!data) return;
 
   const transacoes = data.map((t) => normalizarTransacao(t));
-  console.log(transacoes);
+  preencherTabela(transacoes);
+}
+
+function preencherTabela(transacoes: Trasacao[]): void {
+  const tabela = document.querySelector("#transacoes tbody");
+  if (!tabela) return;
+  transacoes.forEach((transacao) => {
+    tabela.innerHTML += `
+      <tr>
+        <th>${transacao.nome}</th>
+        <th>${transacao.email}</th>
+        <th>R$ ${transacao.moeda}</th>
+        <th>${transacao.pagamento}</th>
+        <th>${transacao.status}</th>
+      </tr>
+    `;
+  });
 }
 
 handleData();
