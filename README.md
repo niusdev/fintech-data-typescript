@@ -58,4 +58,4 @@ src/
 
 Feito por **Vinícius Gomes Damascena**
 
-[![GitHub](https://img.shields.io/badge/GitHub-niusdev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/niusdev/API_REST_MVC_CADASTRO_PROFESSORES)
+[![GitHub](https://img.shields.io/badge/GitHub-niusdev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/niusdev)
