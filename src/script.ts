@@ -16,7 +16,6 @@ async function handleData() {
 
 function preencherLista(lista: CountList, containerId: string): void {
   const containerElement = document.getElementById(containerId);
-  console.log(containerId);
   if (containerElement) {
     Object.keys(lista).forEach((key) => {
       containerElement.innerHTML += `<p>${key}: ${lista[key]}</p> `;
@@ -28,12 +27,17 @@ function preencherEstatisticas(transacoes: Transacao[]): void {
   const data = new Estatisticas(transacoes);
   preencherLista(data.pagamentos, "pagamentos");
   preencherLista(data.status, "status");
+
   const totalElement = document.querySelector<HTMLElement>("#total span");
   if (totalElement) {
     totalElement.innerText = data.total.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
+  }
+  const diaElement = document.querySelector<HTMLElement>("#dia span");
+  if (diaElement) {
+    diaElement.innerText = data.melhorDia[0];
   }
 }
 
