@@ -1,8 +1,6 @@
 import Estatisticas from "./Estatisticas.js";
 import fetchData from "./fetchData.js";
-import moedaParaNumber from "./moedaParaNumber.js";
 import normalizarTransacao from "./normalizarTransacao.js";
-import stringToDate from "./stringToData.js";
 
 async function handleData() {
   const data = await fetchData<TransacaoAPI[]>(
